@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "en">
+<header>
+    <meta charset="UTF-8">
+    <title>Stock by Yin</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+</header>
+<body>
+    <div class = "background">
+        <div class = "search">
+            <h1>Stock Search</h1>
+            <form id = "search-form">
+                <div class="form-row">
+                    <label for="ticker">
+                        Enter Stock Ticker Symbol
+                        <span class="required-star">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="ticker"
+                        name="ticker"
+                        class="ticker-in"
+                        required
+                    >
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" id="search-btn">Search</button>
+                    <button type="reset" id="clear-btn">Clear</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div id = "results-container">
+            <div id = "tabs-tables">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="company-tab">Company Outlook</button>
+                    <button class="tab-button" data-tab="summary-tab">Stock Summary</button>
+                    <button class="tab-button" data-tab="history-tab">Search History</button>
+                </div>
+
+                <div id="company-tab" class="tab-content active">
+                    <table id="company-table">
+                        <tr>
+                            <th>Company Name</th>
+                            <td id="co-name"></td>
+                        </tr>
+                        <tr>
+                            <th>Stock Ticker Symbol</th>
+                            <td id="co-ticker"></td>
+                        </tr>
+                        <tr>
+                            <th>Exchange Code</th>
+                            <td id="co-exchange"></td>
+                        </tr>
+                        <tr>
+                            <th>Company Start Date</th>
+                            <td id="co-startdate"></td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td id="co-desc"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="summary-tab" class="tab-content">
+                    <table id="summary-table">
+                        <tr>
+                            <th>Stock Ticker Symbol</th>
+                            <td id="sum-ticker"></td>
+                        </tr>
+                        <tr>
+                            <th>Trading Day</th>
+                            <td id="sum-day"></td>
+                        </tr>
+                        <tr>
+                            <th>Previous Closing Price</th>
+                            <td id="sum-prev-close"></td>
+                        </tr>
+                        <tr>
+                            <th>Opening Price</th>
+                            <td id="sum-open"></td>
+                        </tr>
+                        <tr>
+                            <th>High Price</th>
+                            <td id="sum-high"></td>
+                        </tr>
+                        <tr>
+                            <th>Low Price</th>
+                            <td id="sum-low"></td>
+                        </tr>
+                        <tr>
+                            <th>Last Price</th>
+                            <td id="sum-last"></td>
+                        </tr>
+                        <tr>
+                            <th>Change</th>
+                            <td id="sum-change"></td>
+                        </tr>
+                        <tr>
+                            <th>Change Percent</th>
+                            <td id="sum-change-pct"></td>
+                        </tr>
+                        <tr>
+                            <th>Number of Shares Traded</th>
+                            <td id="sum-volume"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="history-tab" class="tab-content">
+                        <table id="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Ticker</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history-body">
+
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+            <div id="cache-status" style="margin: 10px 0;"></div>
+            <div id = "result"></div>
+            </div>
+        </div>
+    </div>
+    <script src = "{{ url_for('static', filename = 'script.js')}}"></script>
+
+</body>
+</html>

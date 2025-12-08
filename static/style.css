@@ -1,0 +1,177 @@
+@media (max-width: 480px){
+    h1{
+        font-size: 25px;
+    }
+    .ticker-in, label, button{
+        font-size: 10px !important;
+    }
+    .ticker-in {
+        max-width: 100px;
+    } 
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #655ba6;
+}
+.background{
+    max-width: 1000px;
+    margin: auto;
+}
+.search{
+    background-color: rgb(221, 229, 229);
+    margin: 20px 20px;
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.form-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+label {
+    font-size: 16px;
+}
+.required-star {
+    color: red;
+}
+.ticker-in {
+    padding: 5px 8px;
+    font-size: 14px;
+    width: 200px;
+}
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+button {
+    padding: 6px 18px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+.tabs {
+margin-top: 10px;
+margin-bottom: 10px;
+gap: 2px;
+width: 100%;
+background-color: white;
+font-size:0;
+}
+
+.tab-button {
+width: 20%;
+min-width: 100px;
+padding: 14px 0px;
+border-radius: 0;
+background-color: white;
+cursor: pointer;
+font-weight: bold;
+border: none;
+}
+
+.tab-button.active {
+background-color: #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.tab-content {
+display: none;
+border: 1px solid #ccc;
+border-top: none;
+padding: 12px;
+background-color: white;
+}
+
+.tab-content.active {
+display: block;
+}
+
+#summary-table {
+width: 100%;
+border-collapse: collapse;
+font-size: 14px;
+}
+
+#summary-table th,
+#summary-table td {
+padding: 6px 8px;
+border-bottom: 1px solid #ddd;
+}
+
+#summary-table th {
+text-align: left;
+width: 40%;
+background-color: #f3f3f3;
+}
+
+#summary-table td {
+text-align: right;
+}
+
+#summary-table img.arrow {
+width: 12px;
+height: 12px;
+vertical-align: middle;
+margin-left: 4px;
+}
+#result {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#results-container {
+margin: 20px 20px;
+display: none;
+}
+hr{
+color: #ccc;
+max-width: 1000px;
+margin: 20px;
+}
+
+#company-table,
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#company-table th, #company-table td,
+#history-table th, #history-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#company-table th,
+#history-table th {
+    text-align: left;
+    width: 40%;
+    background-color: #f3f3f3;
+}
+#co-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em;
+    max-height: calc(1.2em * 5);
+}
